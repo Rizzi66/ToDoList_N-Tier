@@ -1,0 +1,12 @@
+{
+  "main": "electron-main.js",
+  "scripts": {
+    "start:client": "cd ToDoListFrontEnd && npm run dev",
+    "start:server": "cd ToDoListBackend && npm start",
+    "start:electron": "concurrently --names \"docker,electron\" --prefix-colors \"blue,green\" \"docker-compose up --build\" \"wait-on http://localhost:5173 && electron .\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "wait-on": "^6.0.0"
+  }
+}
