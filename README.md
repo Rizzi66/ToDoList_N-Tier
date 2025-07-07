@@ -6,6 +6,47 @@ Ce projet est une application ToDo List complète, organisée en architecture N-
 
 ![Schéma Architecture](assets/schema.png)
 
+```text
+├── assets/
+│   ├── logo.png
+│   └── schema.png
+├── Proxy/
+│   ├── Dockerfile
+│   ├── index.js
+│   └── package.json
+├── ToDoListBackend/
+│   ├── Dockerfile
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── src/
+│       ├── db.ts
+│       ├── server.ts
+│       ├── class/
+│       │   └── task.ts
+│       ├── controllers/
+│       │   └── task.ts
+│       └── routes/
+│           └── task.ts
+├── ToDoListFrontEnd/
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package.json
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   ├── components/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── pages/
+│   │   └── utils/
+│   └── ...
+├── docker-compose.yml
+├── electron-main.js
+├── Makefile
+├── package.json
+└── README.md
+```
+
 - **ToDoListFrontEnd** : Application React/TypeScript, UI moderne avec Tailwind CSS, gère l'affichage et l'interaction utilisateur.
 - **Proxy** : Sert d'intermédiaire entre le frontend et le backend, gère la sécurité, le routage, etc.
 - **ToDoListBackend** : API REST Node.js/TypeScript, gère la logique métier, la persistance des tâches, etc.
